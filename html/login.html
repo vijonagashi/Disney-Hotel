@@ -3,28 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In - Disney Hotel</title>
-    <link rel="stylesheet" href="css/login.css">
+    <title>Sign in | Disney Hotel</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/login.js"></script>
 </head>
 <body>
     <main>
-        <header>
-            <p>Disney Hotel</p>
-            <p>Welcome</p>
-        </header>
+        <section class="form-panel" aria-labelledby="login-title">
+            <div class="form-content">
+                <a href="login.html" class="logo">
+                    <img src="../img/logo.png" alt="Disney Hotel">
+                </a>
 
-        <section>
-            <h1>Log In</h1>
-            <p>Write your email and password.</p>
+                <p class="small-title">THE MAGIC CONTINUES</p>
+                <h1 id="login-title">Sign In</h1>
+                <p class="description">Welcome back to your happy placce.</p>
 
-            <form action="">
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="name@example.com">
-                </div>
-            </form>
+                <form id="login-form">
+                    <div class="field">
+                        <label for="username">Username or email</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username or email" autocomplete="username" required>
+
+                    </div>
+
+                    <div class="field">
+                        <label for="password">Password</label>
+
+                        <div class="password-box">
+                            <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+                            <button type="button" class="password-button" data-target="password" aria-controls="password" aria-pressed="false"> Show</button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="main-button">Sign In</button>
+                    <p id="message" class="message" role="status"></p>
+                </form>
+                <p class="switch-page">Don't have an account?
+                    <a href="register.html">Sign Up</a>
+                </p>
+            </div>
         </section>
+        <aside class="welcome-panel">
+            <p class="panel-label">A LITTLE STAY, A LOT OF MAGIC.</p>
+            <h2>Hello, Friend!</h2>
+
+            <p>Create your account and start <br>
+            your magic journey with us.</p>
+
+            <a href="register.html" class="outline-button">Sign Up</a>
+        </aside>
     </main>
+   
+
+      
+
+      
+
+    
     
 </body>
 </html>
